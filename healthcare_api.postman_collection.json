@@ -70,7 +70,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Dr. Alex Mercer\",\n  \"email\": \"alex.{{$timestamp}}@healthcare.org\",\n  \"password\": \"SuperSecurePass123!\"\n}"
+              "raw": "{\n  \"name\": \"Dr. Alex Mercer\",\n  \"email\": \"alex.mercer@healthcare.org\",\n  \"password\": \"SuperSecurePass123!\"\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register/",
