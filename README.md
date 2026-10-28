@@ -1,4 +1,4 @@
-# Healthcare Backend REST API
+# Healthcare Backend  
 
 A backend system for managing patient records, doctor profiles, and patient-doctor mappings using Django, Django REST Framework (DRF), and PostgreSQL with JWT authentication.
 
@@ -7,7 +7,7 @@ A backend system for managing patient records, doctor profiles, and patient-doct
 ## Tech Stack & Prerequisites
 
 - **Python:** 3.12+
-- **Database:** PostgreSQL (strict, no SQLite fallback)
+- **Database:** PostgreSQL
 - **Framework:** Django 5.x / 6.x & Django REST Framework
 - **Authentication:** `djangorestframework-simplejwt`
 - **Environment:** `python-dotenv`
