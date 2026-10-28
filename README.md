@@ -90,8 +90,8 @@ All patient, doctor, and mapping endpoints require a JWT Bearer token in the `Au
 Authorization: Bearer <access_token>
 ```
 
-### Auth Example: Register or Login
-**Request:** `POST /api/auth/register/` (or `POST /api/auth/login/`)
+### 1. Register User
+**Request:** `POST /api/auth/register/`
 ```json
 {
   "name": "Dr. Alex Mercer",
@@ -100,7 +100,7 @@ Authorization: Bearer <access_token>
 }
 ```
 
-**Response (`201 Created` / `200 OK`):**
+**Response (`201 Created`):**
 ```json
 {
   "user": {
@@ -109,6 +109,23 @@ Authorization: Bearer <access_token>
     "email": "alex.mercer@healthcare.org",
     "date_joined": "2026-10-28T09:00:00Z"
   },
+  "access": "eyJhbGciOi...",
+  "refresh": "eyJhbGciOi..."
+}
+```
+
+### 2. Login User
+**Request:** `POST /api/auth/login/`
+```json
+{
+  "email": "alex.mercer@healthcare.org",
+  "password": "SuperSecurePass123!"
+}
+```
+
+**Response (`200 OK`):**
+```json
+{
   "access": "eyJhbGciOi...",
   "refresh": "eyJhbGciOi..."
 }

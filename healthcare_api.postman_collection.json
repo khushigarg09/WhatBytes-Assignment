@@ -287,6 +287,29 @@
             },
             "description": "Update details of an owned patient. Returns 404 for unowned records."
           }
+        },
+        {
+          "name": "Delete Patient",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{access_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/patients/{{patient_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "patients", "{{patient_id}}", ""]
+            },
+            "description": "Delete an owned patient. Returns 404 for unowned records."
+          }
         }
       ]
     },
@@ -359,7 +382,7 @@
               "host": ["{{base_url}}"],
               "path": ["api", "doctors", ""]
             },
-            "description": "Retrieve all doctors."
+            "description": "Retrieve all doctors created by the authenticated user."
           }
         },
         {
@@ -415,6 +438,29 @@
               "path": ["api", "doctors", "{{doctor_id}}", ""]
             },
             "description": "Update details of an owned doctor. Returns 404 for unowned records."
+          }
+        },
+        {
+          "name": "Delete Doctor",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{access_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/doctors/{{doctor_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "doctors", "{{doctor_id}}", ""]
+            },
+            "description": "Delete an owned doctor. Returns 404 for unowned records."
           }
         }
       ]
@@ -538,57 +584,7 @@
           }
         }
       ]
-    },
-    {
-      "name": "Cleanup & Deletions",
-      "item": [
-        {
-          "name": "Delete Doctor",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "{{access_token}}",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/doctors/{{doctor_id}}/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "doctors", "{{doctor_id}}", ""]
-            },
-            "description": "Delete an owned doctor. Returns 404 for unowned records."
-          }
-        },
-        {
-          "name": "Delete Patient",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "{{access_token}}",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/patients/{{patient_id}}/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "patients", "{{patient_id}}", ""]
-            },
-            "description": "Delete an owned patient. Returns 404 for unowned records."
-          }
-        }
-      ]
     }
   ]
 }
+
